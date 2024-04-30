@@ -1,9 +1,10 @@
 <!-- Home.vue -->
 
 <template>
-  <div>
+  <!-- <div>
     <h1>{{ message }}</h1>
-  </div>
+  </div> -->
+  <div></div>
 </template>
 
 <script setup>
