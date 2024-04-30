@@ -8,19 +8,15 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import axios from 'axios';
 
 const message = ref('');
 
 onMounted(async () => {
   try {
-    const response = await fetch('/api/hello'); // "/api" 접두사 추가
-    console.log(response)
-    if (response.ok) {
-      message.value = await response.text();
-    } else {
-      console.error('Failed to fetch data:', response.statusText);
-      message.value = 'Error fetching data';
-    }
+    const response = await axios.get('http://localhost:8080/api/hello');
+    console.log(response.data);
+    message.value = response.data;
   } catch (error) {
     console.error('Error fetching data:', error);
     message.value = 'Error fetching data';
