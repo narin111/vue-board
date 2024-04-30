@@ -4,7 +4,7 @@
   <!-- <div>
     <h1>{{ message }}</h1>
   </div> -->
-  <div></div>
+  <div><h1>홈화면</h1></div>
 </template>
 
 <script setup>
