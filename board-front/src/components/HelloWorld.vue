@@ -15,7 +15,9 @@ const message = ref('');
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:8080/api/hello');
+    // const response = await axios.get('http://localhost:8080/api/hello');
+    const response = await axios.get('http://localhost:8080/api/members');
+    
     console.log(response.data);
     message.value = response.data;
   } catch (error) {
